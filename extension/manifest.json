@@ -1,0 +1,19 @@
+{
+  "name": "YT Music extension",
+  "description": "Read yt music player",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+
+  "action": {
+  },
+
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+  
+}

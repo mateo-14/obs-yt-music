@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: white;
+      opacity: 0.95;
+    }
+
+    .music-player {
+      width: 460px;
+      height: 100px;
+      background: rgb(20, 20, 20);
+      border-radius: 10px;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .music-player__info {
+      padding: 0.8rem 1rem;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .music-player__title {
+      font-size: 1.4rem;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      text-overflow: ellipsis;
+    }
+
+    .music-player__author {
+      font-size: 1.4rem;
+      color: rgb(144, 144, 144);
+      margin: 0;
+      line-height: 1;
+    }
+
+    .music-palyer__progress {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .music-player__time {
+      color: rgb(144, 144, 144);
+    }
+
+    .music-player__progress-bar {
+      height: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      flex: 1;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .music-player__progress-bar--filled {
+      background: #ff0000;
+      height: 100%;
+      width: 0;
+    }
+
+    .music-player__img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .hidden{
+      display: none;
+    }
+  </style>
+
+  <script src="public/main.js" defer></script>
+</head>
+
+<body>
+  <div class="music-player">
+    <img src="" alt="Album" class="music-player__img hidden">
+    <div class="music-player__info">
+      <span class="music-player__title">-</span>
+      <p class="music-player__author">-</p>
+      <div class="music-palyer__progress">
+        <span class="music-player__time">
+          <span class="music-player__time--current">0:00</span>
+          /
+          <span class="music-player__time--duration">0:00</span>
+        </span>
+        <div class="music-player__progress-bar">
+          <div class="music-player__progress-bar--filled"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
